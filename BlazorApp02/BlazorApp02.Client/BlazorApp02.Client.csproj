@@ -19,4 +19,16 @@
     <BlazorGenerate Remove="Pages\Counter.cshtml" />
   </ItemGroup>
 
+  <ItemGroup>
+    <BlazorGenerate Remove="Pages\ChildComponent01.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Pages\ChildComponent01.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\ChildComponent01.cshtml" />
+  </ItemGroup>
+
 </Project>
