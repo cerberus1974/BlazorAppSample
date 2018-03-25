@@ -1,1 +1,11 @@
-﻿<h3>子１</h3>
+﻿@using BlazorApp02.Shared
+<div>
+    <span>@Book.Title</span>:
+    <span>@Book.Author</span>
+</div>
+
+@functions
+{
+// This is to demonstrate how a parent component can supply parameters
+public Book Book { get; set; }
+}
