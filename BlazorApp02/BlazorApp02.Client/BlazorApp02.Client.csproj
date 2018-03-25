@@ -15,4 +15,8 @@
     <ProjectReference Include="..\BlazorApp02.Shared\BlazorApp02.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <BlazorGenerate Remove="Pages\Counter.cshtml" />
+  </ItemGroup>
+
 </Project>
