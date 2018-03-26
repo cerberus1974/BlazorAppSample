@@ -1,9 +1,30 @@
 ﻿@using BlazorApp02.Shared
 @page "/books"
 
+    <div class="form-inline">
+        <input class="form-control" type="text" @bind(title) />
+        <input class="form-control" type="text" @bind(author) />
+        <button class="btn btn-info" @onclick(Add)>登録</button>
+    </div>
 
-@for (int i = 0; i < 10; i++)
-{
-    var book = new Book { Title = $"タイトル{i}", Author = $"著者{i}" };
-    <BookChild Book="book"></BookChild>
+
+    @foreach(var book in books)
+    {
+        <BookChild Book="book"></BookChild>
+    }
+
+@functions {
+    List<Book> books = new List<Book>();
+
+    string title;
+    string author;
+
+    void Add()
+    {
+        var book = new Book { Title = title, Author = author };
+        books.Add(book);
+
+        title = "";
+        author = "";
+    }
 }
