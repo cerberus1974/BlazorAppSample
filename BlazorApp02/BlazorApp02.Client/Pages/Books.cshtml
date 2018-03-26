@@ -1,0 +1,9 @@
+﻿@using BlazorApp02.Shared
+@page "/books"
+
+
+@for (int i = 0; i < 10; i++)
+{
+    var book = new Book { Title = $"タイトル{i}", Author = $"著者{i}" };
+    <BookChild Book="book"></BookChild>
+}

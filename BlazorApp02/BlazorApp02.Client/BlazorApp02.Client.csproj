@@ -20,15 +20,20 @@
   </ItemGroup>
 
   <ItemGroup>
-    <BlazorGenerate Remove="Pages\ChildComponent01.cshtml" />
+    <None Include="Pages\Books.cshtml" />
+    <None Include="Pages\BookChild.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Remove="Pages\ChildComponent01.cshtml" />
+    <BlazorGenerate Remove="Pages\Books.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Pages\ChildComponent01.cshtml" />
+    <Content Remove="Pages\Books.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <BlazorGenerate Remove="Pages\BookChild.cshtml" />
   </ItemGroup>
 
 </Project>
